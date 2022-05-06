@@ -1,0 +1,10 @@
+{% extends 'header.html' %}
+
+{% block content%} 
+    {{msg}}
+    <form action="{% url 'blog' %}" method="POST" >
+        {% csrf_token %}
+        {{post.as_p}}
+        <button class="btn btn-primary" type="submit" style="margin-left: 20px;">Post</button>
+
+{% endblock content%}

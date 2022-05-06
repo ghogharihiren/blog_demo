@@ -1,0 +1,9 @@
+{% extends 'header.html' %}
+
+{% block content%} 
+    <form method="POST" >
+        {% csrf_token %}
+       {{post.as_p}}
+        <button class="btn btn-primary" type="submit" style="margin-left: 20px;">update-post</button>
+    </form>
+{% endblock content%}
